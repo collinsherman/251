@@ -16,9 +16,12 @@ class ClassA {
 
         ClassA a = new ClassA();
 
-        ClassB b = new ClassB();
-
-        a.setGreeter(b);
+        a.setGreeter(new ClassB(){
+            @Override
+            public void sayHello(){
+                System.out.println("\nHello Professor Levy!");
+            }
+        });
 
         a.invokeGreeter();
     }
