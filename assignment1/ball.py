@@ -63,11 +63,14 @@ class Ball:
     def setDirection(self, direction):
         """Changes direction that ball moves"""
         
-        if direction == "RIGHT":
+        if direction == "right" or direction == "r":
             self.direction = +1
             return
-        else:
+        elif direction == "left" or direction == "l":
             self.direction = -1
+            return
+        else:
+            print("Invalid command.")
             return
 
 
@@ -77,9 +80,9 @@ def updater(ball):
     while True:
 
         command = input("Would you like to go left, right, or quit? ")
-        command = command.upper()
+        command = command.lower()
 
-        if command == "QUIT":
+        if command == "quit" or command == "q":
             ball.quit = True
             break
         else:
