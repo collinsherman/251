@@ -5,6 +5,8 @@ ball.py : illustrate threading with an animation
 
 Copyright (C) Simon D. Levy 2016
 
+Modified by Collin Sherman
+
 Adapted from  http://stackoverflow.com/questions/25430786/moving-balls-in-tkinter-canvas
 '''
 from tkinter import *
